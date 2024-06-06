@@ -1,0 +1,12 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JossueAyala22.Confirmacion">
+
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Recarga exitosa" FontSize="Large" HorizontalOptions="Center" />
+            <Label x:Name="JAyala_confirmationLabel" FontSize="Medium" HorizontalOptions="Center" />
+            <Button Text="OK" Clicked="OnOkButtonClicked" BackgroundColor="#6200EE" TextColor="White" WidthRequest="200" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

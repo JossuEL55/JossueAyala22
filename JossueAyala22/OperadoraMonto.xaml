@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JossueAyala22.OperadoraMonto">
+
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <Label Text="Seleccione el operador:" FontSize="Medium" HorizontalOptions="Center" />
+            <Picker x:Name="JAyala_operatorPicker" Title="Movistar" HorizontalOptions="Center" WidthRequest="200">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Movistar</x:String>
+                        <x:String>Claro</x:String>
+                        <x:String>Tuenti</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Seleccione el valor de la recarga:" FontSize="Medium" HorizontalOptions="Center" />
+            <RadioButton x:Name="JAyala_rechargeOption3" Content="3" GroupName="RechargeOptions" CheckedChanged="OnRechargeOptionChanged"/>
+            <RadioButton x:Name="JAyala_rechargeOption5" Content="5" GroupName="RechargeOptions" CheckedChanged="OnRechargeOptionChanged"/>
+            <RadioButton x:Name="JAyala_rechargeOption10" Content="10" GroupName="RechargeOptions" CheckedChanged="OnRechargeOptionChanged"/>
+            <Label x:Name="JAyala_selectedAmountLabel" FontSize="Medium" HorizontalOptions="Center" />
+
+            <Button Text="Recargar" Clicked="OnRechargeButtonClicked" BackgroundColor="#6200EE" TextColor="White" WidthRequest="200" HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

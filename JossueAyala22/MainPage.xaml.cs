@@ -1,25 +1,23 @@
-﻿namespace JossueAyala22
+﻿
+namespace JossueAyala22
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnNextButtonClicked(object sender, EventArgs e)
         {
-            count++;
+            string phoneNumber = JAyala_phoneNumberEntry.Text;
+            if (string.IsNullOrEmpty(phoneNumber))
+            {
+                await DisplayAlert("Error", "Por favor ingrese un número de teléfono.", "OK");
+                return;
+            }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            await Navigation.PushAsync(new OperadoraMonto(phoneNumber));
         }
     }
-
 }
